@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "task-allocation-runtime: allocating decisions across people, language models and deterministic tools"
+abstract: >-
+  Reference implementation of a task-analytic method for allocating the
+  decisions in a cognitive task among deterministic tools, small language
+  models, reasoning models and people. Task models follow an observe, orient,
+  decide and act structure; an ordered allocation rule assigns each decision to
+  a tier using formal specifiability, cognitive control, Cynefin domain and
+  whether the decision is epistemic or normative. Machine tiers abstain and
+  escalate, normative choices stay with people or explicitly scoped policies,
+  and hand-offs to supervisors are typed and size-bounded. The repository also
+  contains the protocol, code and synthetic materials of a completed
+  computational study of the method on a synthetic air-to-air refuelling
+  (tanker join) scenario. The Zenodo archive adds the study's collected
+  records and analysis outputs.
+authors:
+  - family-names: Vajda
+    given-names: Simon
+    affiliation: "Applied Artificial Intelligence Institute, Deakin University, Burwood, Victoria, Australia"
+    orcid: "https://orcid.org/0000-0002-2751-4816"
+version: 0.2.0
+date-released: 2026-10-09
+doi: 10.5281/zenodo.23225358
+license: MIT
+repository-code: "https://github.com/Rainierraoul/task-allocation-runtime"
+keywords:
+  - function allocation
+  - levels of automation
+  - human-AI teaming
+  - language-model agents
+  - hierarchical task analysis
+  - Cynefin
+  - OODA

@@ -1,0 +1,324 @@
+# M1 task models for thesis Scenario 5: a simpilot controlling two aircraft.
+#
+# Source: Vajda (2023), Chapter 3, Scenario 5, and Appendix F (AOSC Demo 2). A trainee in
+# the control agency radios: "aircraft 2, make your way to the fuel tanker,
+# contact me when you are 20 nautical miles out". The seven subtasks and their
+# order follow the thesis's task sequence. DEV adds the White Force objective
+# the thesis names ("disobey or misinterpret commands" to create a training
+# opportunity). Aircraft 1 is not modelled, as in the thesis.
+#
+# Callsigns, channels and positions are sample values, not exercise data.
+
+scenario: "Simpilot flies aircraft 2 to the tanker and reports at 20 NM"
+version: "0.1"
+root: FLY
+
+objectives:
+  - id: O1
+    text: "Make your way to the fuel tanker and contact control when 20 nautical miles out"
+  - id: O2
+    text: "Create training opportunities for the trainee in the control agency"
+
+task_models:
+
+  - id: FLY
+    name: "Fly to the tanker and respond on radio"
+    goal: "Aircraft 2 is within the reporting distance of the tanker and control has been told"
+    objectives: [O1, O2]
+    subtasks: [ACK, DEV, LOC, SEL, HDG, CFG, WAIT, CALL]
+    plan: "Do ACK, then DEV, then LOC to CALL in order"
+    description:
+      action: "Fly and report"
+      object: "Aircraft 2"
+      output: "Aircraft 2 within 20 NM of the tanker, and control informed"
+      tooling: "Simulation console, radio"
+      context: "Starts when control's instruction arrives; ends when the call is made"
+    task_type: procedural
+    control_level: knowledge
+    cynefin: complicated
+    observations:
+      - {name: distance_nm, value_type: number, source: tool}
+      - {name: report_at_nm, value_type: number, source: model, description: "From ACK"}
+      - {name: call_status, value_type: enum, source: model, description: "From CALL"}
+      - {name: message, value_type: text, source: model, description: "From CALL"}
+      - {name: choice, value_type: enum, source: person, description: "From DEV"}
+    orientations:
+      - {name: briefing_material, kind: data}
+    decision:
+      rule: "The goal is met when distance_nm <= report_at_nm and call_status is 'made'"
+      kind: epistemic
+      describability: algorithm
+    action: {name: report_situation, reversible: true, effect: "Situation summary to White Force"}
+    impact: {distance: 0, failure_breaks_objective: true}
+    frequency: 1
+    hand_off:
+      to: people
+      fusion_level: L2
+      fields: {summary: text, goal_met: bool, distance_nm: number, plan_choice: enum, next: text}
+      max_tokens: 90
+    executors: {T0: goal_check}
+
+  - id: ACK
+    name: "Acknowledge receipt of the command over radio"
+    goal: "The instruction is understood and acknowledged"
+    objectives: [O1]
+    parent: FLY
+    description:
+      action: "Listen, interpret and respond"
+      object: "Radio transmission from the control agency"
+      output: "Confirmation of the command received"
+      tooling: "Radio, voice, command lexicon"
+      context: "In response to a command directed to self"
+    task_type: functional
+    control_level: rule
+    cynefin: clear
+    observations:
+      - {name: transmission, value_type: text, source: tool}
+    orientations:
+      - {name: own_callsigns, kind: data}
+      - {name: command_lexicon, kind: procedure}
+    decision:
+      rule: "Identify who the instruction is addressed to and what it asks. Accept it only if it is addressed to an aircraft we control."
+      kind: epistemic
+      describability: plain_language
+      abstain_when:
+        - "the addressee could be more than one aircraft"
+        - "the instruction is not in the command lexicon"
+    action: {name: transmit_acknowledgement, reversible: true, effect: "Radio acknowledgement; correctable by a follow-up call"}
+    impact: {distance: 1, failure_breaks_objective: false}
+    frequency: 1
+    hand_off:
+      fusion_level: L1
+      fields: {addressee: text, instruction: enum, report_at_nm: number, acknowledged: bool}
+      max_tokens: 45
+    executors: {T1: parse_command_small, T2: parse_command_reasoning}
+
+  - id: DEV
+    name: "Decide whether to deviate from the instruction"
+    goal: "The trainee gets the problem the training objectives call for"
+    objectives: [O2]
+    parent: FLY
+    description:
+      action: "Choose"
+      object: "The simpilot's response to the instruction"
+      output: "Comply, or misinterpret the instruction to give the trainee a problem"
+      tooling: "Training objectives, exercise plan"
+      context: "After the instruction is understood, before the aircraft moves"
+    task_type: functional
+    control_level: knowledge
+    cynefin: complex
+    observations:
+      - {name: trainee_level, value_type: enum, source: tool}
+      - {name: deviation_inject_scheduled, value_type: bool, source: tool}
+    orientations:
+      - {name: training_objectives, kind: intent}
+      - {name: exercise_plan, kind: data}
+    decision:
+      rule: "Choose whether aircraft 2 complies with the instruction or misinterprets it to give the trainee a problem to solve"
+      kind: normative
+      describability: plain_language
+      policy_features: [trainee_level, deviation_inject_scheduled]
+    action: {name: record_deviation_plan, reversible: true}
+    impact: {distance: 1, failure_breaks_objective: false}
+    frequency: 1
+    hand_off:
+      fusion_level: L2
+      fields: {choice: enum, rationale: text}
+      max_tokens: 40
+    executors: {}
+
+  - id: LOC
+    name: "Check the location of the fuel tanker"
+    goal: "The tanker's position and orbit are known"
+    objectives: [O1]
+    parent: FLY
+    description:
+      action: "Check, locate"
+      object: "Fuel tanker"
+      output: "Tanker located"
+      tooling: "HUD, map"
+      context: "In response to the command"
+    task_type: functional
+    control_level: skill
+    cynefin: clear
+    observations:
+      - {name: entity_list, value_type: entity, source: tool}
+    orientations:
+      - {name: briefing_material, kind: data}
+    decision:
+      rule: "State machine: hidden -> visible when an entity's callsign matches the tanker callsign in the briefing"
+      kind: epistemic
+      describability: state_machine
+      abstain_when: ["the tanker callsign is not in the entity list"]
+    action: {name: centre_map_on_tanker, reversible: true}
+    impact: {distance: 1, failure_breaks_objective: true}
+    frequency: 1
+    hand_off:
+      fusion_level: L1
+      fields: {tanker: text, tanker_found: bool, orbit: text}
+      max_tokens: 30
+    executors: {T0: locate_tanker}
+
+  - id: SEL
+    name: "Select the entity named aircraft 2"
+    goal: "Aircraft 2 is the selected entity"
+    objectives: [O1]
+    parent: FLY
+    description:
+      action: "Select, identify, target"
+      object: "Entity aircraft 2"
+      output: "Aircraft 2 selected"
+      tooling: "Mouse, display, map"
+      context: "When the aircraft needs control, select it first"
+    task_type: functional
+    control_level: skill
+    cynefin: clear
+    observations:
+      - {name: entity_list, value_type: entity, source: tool}
+      - {name: addressee, value_type: text, source: model, description: "From ACK"}
+    orientations: []
+    decision:
+      rule: "State machine: unselected -> selected when the addressee is in the entity list"
+      kind: epistemic
+      describability: state_machine
+      abstain_when: ["the addressee is not in the entity list"]
+    action: {name: select_entity_on_console, reversible: true}
+    impact: {distance: 1, failure_breaks_objective: false}
+    frequency: 1
+    hand_off:
+      fusion_level: L1
+      fields: {selected: text}
+      max_tokens: 15
+    executors: {T0: select_entity}
+
+  - id: HDG
+    name: "Adjust aircraft 2's heading to intercept the tanker"
+    goal: "Aircraft 2 is on an intercept heading"
+    objectives: [O1]
+    parent: FLY
+    description:
+      action: "Adjust"
+      object: "Aircraft 2 heading"
+      output: "Heading changed to intercept"
+      tooling: "Mouse, console"
+      context: "After the unit has been selected"
+    task_type: functional
+    control_level: rule
+    cynefin: complicated
+    observations:
+      - {name: aircraft2_state, value_type: position, source: tool}
+      - {name: tanker_state, value_type: position, source: tool}
+    orientations:
+      - {name: intercept_method, kind: procedure}
+    decision:
+      rule: "Algorithm: iterate the time to intercept against the tanker's predicted orbit position; steer to the predicted point"
+      kind: epistemic
+      describability: algorithm
+    action: {name: set_heading, reversible: true}
+    impact: {distance: 0, failure_breaks_objective: true}
+    frequency: 1
+    hand_off:
+      fusion_level: L1
+      fields: {heading_deg: number, time_to_intercept_min: number}
+      max_tokens: 30
+    executors: {T0: intercept_heading}
+
+  - id: CFG
+    name: "Configure the distance measurement tool"
+    goal: "The tool measures from aircraft 2 to the tanker"
+    objectives: [O1]
+    parent: FLY
+    description:
+      action: "Click"
+      object: "Screen, two points"
+      output: "Line drawn as distance"
+      tooling: "Mouse"
+      context: "After the unit is selected"
+    task_type: functional
+    control_level: skill
+    cynefin: clear
+    observations:
+      - {name: selected, value_type: text, source: tool, description: "From SEL"}
+      - {name: tanker, value_type: text, source: tool, description: "From LOC"}
+    orientations: []
+    decision:
+      rule: "State machine: no line -> line drawn when both end points are known entities"
+      kind: epistemic
+      describability: state_machine
+    action: {name: configure_distance_tool, reversible: true}
+    impact: {distance: 1, failure_breaks_objective: false}
+    frequency: 1
+    hand_off:
+      fusion_level: L1
+      fields: {tool_ready: bool, line: text}
+      max_tokens: 25
+    executors: {T0: configure_tool}
+
+  - id: WAIT
+    name: "Wait until the tool reads the reporting distance"
+    goal: "Aircraft 2 is at the reporting distance"
+    objectives: [O1]
+    parent: FLY
+    description:
+      action: "Observe"
+      object: "Distance tool"
+      output: "Correct distance reached"
+      tooling: "HUD, screen"
+      context: "After the heading is adjusted"
+    task_type: functional
+    control_level: skill
+    cynefin: clear
+    observations:
+      - {name: distance_nm, value_type: number, source: tool}
+      - {name: report_at_nm, value_type: number, source: model, description: "From ACK"}
+    orientations: []
+    decision:
+      rule: "State machine: outside range -> at range when distance_nm <= report_at_nm, checked every 5 simulated seconds"
+      kind: epistemic
+      describability: state_machine
+      abstain_when: ["the distance is not closing"]
+    action: {name: hold_until_range, reversible: true}
+    impact: {distance: 1, failure_breaks_objective: true}
+    frequency: 1
+    hand_off:
+      fusion_level: L1
+      fields: {at_range: bool, distance_nm: number, elapsed_min: number}
+      max_tokens: 30
+    executors: {T0: wait_for_range}
+
+  - id: CALL
+    name: "Contact the control agency"
+    goal: "Control knows aircraft 2 is at the reporting distance"
+    objectives: [O1]
+    parent: FLY
+    description:
+      action: "Call"
+      object: "Control agency"
+      output: "Range report acknowledged by control"
+      tooling: "Radio, comms plan"
+      context: "At the reporting distance"
+    task_type: functional
+    control_level: rule
+    cynefin: complicated
+    observations:
+      - {name: channel_state, value_type: enum, source: tool}
+      - {name: jamming_inject_scheduled, value_type: bool, source: tool}
+      - {name: distance_nm, value_type: number, source: tool}
+    orientations:
+      - {name: radio_procedure, kind: procedure}
+      - {name: comms_plan, kind: data}
+      - {name: exercise_injects, kind: data}
+    decision:
+      rule: "Compose the range report to control, following radio procedure, on a channel that works"
+      kind: epistemic
+      describability: plain_language
+      abstain_when: ["the channel is not clear"]
+      policy_features: [channel_state, jamming_inject_scheduled, distance_nm]
+    action: {name: transmit_call, reversible: true, effect: "Radio call; correctable by a follow-up call"}
+    impact: {distance: 0, failure_breaks_objective: true}
+    frequency: 1
+    hand_off:
+      fusion_level: L2
+      fields: {call_status: enum, message: text, frequency: text}
+      max_tokens: 45
+    executors: {T1: compose_call_small, T2: resolve_call_reasoning}

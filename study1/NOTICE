@@ -1,0 +1,11 @@
+The BERT routing decision rule in router.py follows the Apache-2.0 implementation
+of lm-sys/RouteLLM (BERTRouter in routellm/routers/routers.py).
+https://github.com/lm-sys/RouteLLM
+
+The original checkpoint is routellm/bert_gpt4_augmented at Hugging Face revision
+86237e3df400762178ea98379477b8296e66d5e4, whose supplied LICENSE is Apache-2.0.
+Weights are downloaded separately and are not distributed in this repository.
+
+The adapter loads that checkpoint directly, disables dropout using model.eval(),
+performs the published softmax decision calculation, and records local runtime.
+It does not train a new router or claim calibration to the study's model pair.

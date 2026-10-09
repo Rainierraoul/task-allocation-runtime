@@ -1,0 +1,5696 @@
+{
+  "protocol_version": "1.0",
+  "seed": 20261007,
+  "test_n": 64,
+  "heldout_n": 32,
+  "instances": [
+    {
+      "id": "heldout-030",
+      "split": "heldout",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 25 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.5836561266770275,
+          "y": 1.8184479153648105,
+          "heading_deg": 90.0,
+          "speed_kts": 433.5132353355026
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 66.72261244477244,
+          "cy": 43.27330439027229,
+          "radius_nm": 9.107941761631523,
+          "speed_kts": 268.5921123499615,
+          "angle_rad": 1.4331052346887063
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.11 NM circular orbit, 268.59 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "heldout-004",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, proceed to the tanker; call control when 25 nautical miles from it.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.789967780406591,
+          "y": -2.124055824698692,
+          "heading_deg": 90.0,
+          "speed_kts": 455.88572548651365
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 57.874017671200185,
+          "cy": 47.801989770072616,
+          "radius_nm": 7.0644122363381605,
+          "speed_kts": 284.08250774258676,
+          "angle_rad": 2.0924981419883184
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "7.06 NM circular orbit, 284.08 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-029",
+      "split": "heldout",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, make your way to the fuel tanker, contact me when you are 30 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.494947750087877,
+          "y": 4.920773219191295,
+          "heading_deg": 90.0,
+          "speed_kts": 440.3141883410176
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 51.33746652616574,
+          "cy": 57.78707435549667,
+          "radius_nm": 6.422441235681751,
+          "speed_kts": 269.1354393680686,
+          "angle_rad": 4.567898593326836
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.42 NM circular orbit, 269.14 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-022",
+      "split": "heldout",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, fly to the fuel tanker and advise control at 30 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 3.9941502866609166,
+          "y": 2.5209640547688945,
+          "heading_deg": 90.0,
+          "speed_kts": 462.3740921880627
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 65.6166427341798,
+          "cy": 49.29261795320286,
+          "radius_nm": 8.208051491680129,
+          "speed_kts": 278.34168726584016,
+          "angle_rad": 0.7918355293769939
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.21 NM circular orbit, 278.34 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "heldout-008",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, make your way to the fuel tanker, contact me when you are 25 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.5867491329037717,
+          "y": -3.6665285391056623,
+          "heading_deg": 90.0,
+          "speed_kts": 475.6493331158937
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 73.88661963963781,
+          "cy": 51.451607777219294,
+          "radius_nm": 8.500532126722469,
+          "speed_kts": 293.91020808920786,
+          "angle_rad": 4.090323799679345
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.50 NM circular orbit, 293.91 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-014",
+      "split": "heldout",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, proceed to the tanker; call control when 15 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 3.3686545173759246,
+          "y": 1.0260847552069476,
+          "heading_deg": 90.0,
+          "speed_kts": 454.490261367592
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 78.3684300913931,
+          "cy": 48.537746600647765,
+          "radius_nm": 9.084417110551925,
+          "speed_kts": 294.0515528391659,
+          "angle_rad": 0.29700204845996564
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.08 NM circular orbit, 294.05 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "heldout-009",
+      "split": "heldout",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, proceed to the tanker; call control when 25 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.2592997940167443,
+          "y": -0.6005574783919299,
+          "heading_deg": 90.0,
+          "speed_kts": 446.6199272626537
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 57.94266108909879,
+          "cy": 48.79505449999834,
+          "radius_nm": 9.740260514227526,
+          "speed_kts": 296.7108264896624,
+          "angle_rad": 6.048336002950859
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.74 NM circular orbit, 296.71 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-016",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, proceed to the tanker; call control when 15 nautical miles from it.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.022077906412596,
+          "y": 3.9757797395955983,
+          "heading_deg": 90.0,
+          "speed_kts": 436.222324357682
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 69.79532921468008,
+          "cy": 38.89282041650226,
+          "radius_nm": 9.942827419127685,
+          "speed_kts": 293.6712979866923,
+          "angle_rad": 1.2066860896557823
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.94 NM circular orbit, 293.67 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-007",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 10 nautical miles out.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.7441939553009576,
+          "y": 2.418776547061884,
+          "heading_deg": 90.0,
+          "speed_kts": 474.73132387844123
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 55.688068623559644,
+          "cy": 39.15659495501646,
+          "radius_nm": 7.862967892496815,
+          "speed_kts": 278.51529884586915,
+          "angle_rad": 2.059656953287249
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.86 NM circular orbit, 278.52 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-012",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 30 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.9219388519268605,
+          "y": -4.560292504948945,
+          "heading_deg": 90.0,
+          "speed_kts": 456.7755758488498
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 56.15505908091035,
+          "cy": 37.84629378022476,
+          "radius_nm": 7.971295055369598,
+          "speed_kts": 283.83069946244325,
+          "angle_rad": 4.555461703061684
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.97 NM circular orbit, 283.83 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-023",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, proceed to the tanker; call control when 10 nautical miles from it.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.684150418227173,
+          "y": -4.354856541415536,
+          "heading_deg": 90.0,
+          "speed_kts": 455.1062396226751
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 69.55822180558783,
+          "cy": 40.96449870623704,
+          "radius_nm": 7.3646996655160795,
+          "speed_kts": 284.06186573211966,
+          "angle_rad": 2.2864095143841205
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.36 NM circular orbit, 284.06 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-018",
+      "split": "heldout",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, proceed to the tanker; call control when 20 nautical miles from it.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 0.45331201202712723,
+          "y": 3.10733035258321,
+          "heading_deg": 90.0,
+          "speed_kts": 420.24388888756283
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 54.66055758672872,
+          "cy": 50.958406022584086,
+          "radius_nm": 9.992951177502604,
+          "speed_kts": 298.42947315702577,
+          "angle_rad": 3.9265152265456917
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.99 NM circular orbit, 298.43 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "heldout-015",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, join the tanker and report at 10 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.226565065616297,
+          "y": -1.6729783450199176,
+          "heading_deg": 90.0,
+          "speed_kts": 462.4481894679999
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 51.18033912855694,
+          "cy": 35.509124801283846,
+          "radius_nm": 8.312295234864694,
+          "speed_kts": 292.4284049114242,
+          "angle_rad": 6.066760733952575
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.31 NM circular orbit, 292.43 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-019",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, fly to the fuel tanker and advise control at 30 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.847609812207554,
+          "y": -1.4630307580636712,
+          "heading_deg": 90.0,
+          "speed_kts": 439.4662060267992
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 65.63063917750904,
+          "cy": 56.78259187750115,
+          "radius_nm": 8.034170678937693,
+          "speed_kts": 263.4902718309157,
+          "angle_rad": 4.453620763237625
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.03 NM circular orbit, 263.49 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-026",
+      "split": "heldout",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, proceed to the tanker; call control when 25 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 0.9417766097613072,
+          "y": -4.165406666627116,
+          "heading_deg": 90.0,
+          "speed_kts": 446.25989947829254
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 67.56526486999084,
+          "cy": 42.4015680499863,
+          "radius_nm": 9.145561572659407,
+          "speed_kts": 270.5009132873684,
+          "angle_rad": 1.508979782880408
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.15 NM circular orbit, 270.50 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "heldout-028",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, proceed to the tanker; call control when 20 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.4523339721871382,
+          "y": 3.167371268326974,
+          "heading_deg": 90.0,
+          "speed_kts": 452.7380790046777
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 66.38530196752626,
+          "cy": 59.54812067097076,
+          "radius_nm": 9.486512504656787,
+          "speed_kts": 269.71410384050347,
+          "angle_rad": 0.5036819459837197
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.49 NM circular orbit, 269.71 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-000",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, fly to the fuel tanker and advise control at 10 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.754436415635524,
+          "y": -2.133653462073842,
+          "heading_deg": 90.0,
+          "speed_kts": 447.02646466787036
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 62.28962178269912,
+          "cy": 49.16862807183446,
+          "radius_nm": 7.24141558355905,
+          "speed_kts": 278.6878568016841,
+          "angle_rad": 2.5062102726362476
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.24 NM circular orbit, 278.69 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-013",
+      "split": "heldout",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 25 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.458733777709184,
+          "y": 2.2651941275536416,
+          "heading_deg": 90.0,
+          "speed_kts": 442.5418594067122
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 51.91364487751125,
+          "cy": 45.85164788118708,
+          "radius_nm": 9.285950207467051,
+          "speed_kts": 277.7874961629417,
+          "angle_rad": 2.530446974760814
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.29 NM circular orbit, 277.79 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-003",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, make your way to the fuel tanker, contact me when you are 10 nautical miles out.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.3710481643492098,
+          "y": -2.593508977943996,
+          "heading_deg": 90.0,
+          "speed_kts": 466.4828935768006
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 58.9665881449323,
+          "cy": 56.96495502424524,
+          "radius_nm": 8.674173973954138,
+          "speed_kts": 264.6302072924274,
+          "angle_rad": 4.8233371968493985
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.67 NM circular orbit, 264.63 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-027",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, fly to the fuel tanker and advise control at 25 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.5118401074488896,
+          "y": -4.245798006971872,
+          "heading_deg": 90.0,
+          "speed_kts": 431.88863099087996
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 79.7157517971126,
+          "cy": 54.918696298494396,
+          "radius_nm": 7.360306480780025,
+          "speed_kts": 278.39973139597527,
+          "angle_rad": 5.035828631745267
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.36 NM circular orbit, 278.40 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-002",
+      "split": "heldout",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, make your way to the fuel tanker, contact me when you are 10 nautical miles out.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.2947801559392325,
+          "y": 3.52324491487661,
+          "heading_deg": 90.0,
+          "speed_kts": 462.16961104408426
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 55.782957250973084,
+          "cy": 37.67476849582398,
+          "radius_nm": 7.090337032250989,
+          "speed_kts": 281.16013629083983,
+          "angle_rad": 5.007827932723848
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.09 NM circular orbit, 281.16 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "heldout-010",
+      "split": "heldout",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, fly to the fuel tanker and advise control at 15 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 1.8686580921963305,
+          "y": -4.242544341918697,
+          "heading_deg": 90.0,
+          "speed_kts": 435.79475028675887
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 63.48214006274101,
+          "cy": 52.33146807000968,
+          "radius_nm": 6.656138074395029,
+          "speed_kts": 278.2942214023224,
+          "angle_rad": 5.628478714074875
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.66 NM circular orbit, 278.29 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "heldout-024",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, join the tanker and report at 20 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.7438920428432554,
+          "y": -4.923594201002906,
+          "heading_deg": 90.0,
+          "speed_kts": 458.51697500184656
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 71.47615901206788,
+          "cy": 59.16400610992015,
+          "radius_nm": 9.533591724465905,
+          "speed_kts": 270.0294290597385,
+          "angle_rad": 2.8741712298208917
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.53 NM circular orbit, 270.03 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-006",
+      "split": "heldout",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 25 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.536978905652679,
+          "y": -2.2534647661142317,
+          "heading_deg": 90.0,
+          "speed_kts": 458.4445351168588
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 69.14952564060306,
+          "cy": 43.98757097139523,
+          "radius_nm": 9.941066647595957,
+          "speed_kts": 272.13654597323244,
+          "angle_rad": 4.169488149811371
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.94 NM circular orbit, 272.14 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "heldout-031",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, make your way to the fuel tanker, contact me when you are 10 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 0.799277288203629,
+          "y": -1.7783126706517471,
+          "heading_deg": 90.0,
+          "speed_kts": 437.12261877430706
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 56.46093455877511,
+          "cy": 40.180570780595005,
+          "radius_nm": 7.225324587403337,
+          "speed_kts": 277.53751975067064,
+          "angle_rad": 2.6189219540620274
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "7.23 NM circular orbit, 277.54 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-020",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, proceed to the tanker; call control when 25 nautical miles from it.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.942899706773817,
+          "y": 4.078671070578894,
+          "heading_deg": 90.0,
+          "speed_kts": 466.7907244275538
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 56.110427419159386,
+          "cy": 39.64103435881753,
+          "radius_nm": 7.470547650108838,
+          "speed_kts": 296.4477718331128,
+          "angle_rad": 1.3579305673634152
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.47 NM circular orbit, 296.45 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-011",
+      "split": "heldout",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, proceed to the tanker; call control when 20 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.9230509902665647,
+          "y": -2.2901672611015265,
+          "heading_deg": 90.0,
+          "speed_kts": 438.01014406002196
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 62.69545860326012,
+          "cy": 45.85583484060971,
+          "radius_nm": 6.497697779917994,
+          "speed_kts": 261.77133487075776,
+          "angle_rad": 5.9549864496127745
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.50 NM circular orbit, 261.77 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-025",
+      "split": "heldout",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, join the tanker and report at 30 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.395335553483026,
+          "y": -4.056702097716419,
+          "heading_deg": 90.0,
+          "speed_kts": 445.2692684274685
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 74.00157167175922,
+          "cy": 50.67112471215277,
+          "radius_nm": 8.069498570550277,
+          "speed_kts": 263.33272988421805,
+          "angle_rad": 5.829884986371994
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.07 NM circular orbit, 263.33 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-001",
+      "split": "heldout",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, proceed to the tanker; call control when 10 nautical miles from it.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 1.0830687781611905,
+          "y": -1.8250460081502284,
+          "heading_deg": 90.0,
+          "speed_kts": 440.9907700859555
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 52.338942085860296,
+          "cy": 47.2588187574549,
+          "radius_nm": 6.033149564232527,
+          "speed_kts": 273.1627323635199,
+          "angle_rad": 3.6346823948958322
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.03 NM circular orbit, 273.16 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-005",
+      "split": "heldout",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, make your way to the fuel tanker, contact me when you are 10 nautical miles out.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.8986790666462605,
+          "y": 4.427571281693281,
+          "heading_deg": 90.0,
+          "speed_kts": 479.42166468646735
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 56.512320509643274,
+          "cy": 44.25190610808788,
+          "radius_nm": 6.256656152516861,
+          "speed_kts": 265.82548953654714,
+          "angle_rad": 6.1580200878666815
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.26 NM circular orbit, 265.83 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-021",
+      "split": "heldout",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, join the tanker and report at 30 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.564164141381149,
+          "y": -3.5595797694256825,
+          "heading_deg": 90.0,
+          "speed_kts": 442.2838723196711
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 57.865993109254354,
+          "cy": 50.967122307121855,
+          "radius_nm": 8.27573556420328,
+          "speed_kts": 265.4949824171972,
+          "angle_rad": 3.0028636681279575
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.28 NM circular orbit, 265.49 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "heldout-017",
+      "split": "heldout",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, make your way to the fuel tanker, contact me when you are 20 nautical miles out.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.5771690595484102,
+          "y": 2.103467407966132,
+          "heading_deg": 90.0,
+          "speed_kts": 427.72600266847644
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 60.187768445564764,
+          "cy": 42.88100753601587,
+          "radius_nm": 6.430610928710484,
+          "speed_kts": 264.0151393669117,
+          "angle_rad": 4.501400677043309
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "6.43 NM circular orbit, 264.02 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-056",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, join the tanker and report at 10 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -0.7582584305264586,
+          "y": -1.3353155304275646,
+          "heading_deg": 90.0,
+          "speed_kts": 468.6748525832562
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 64.30011001156475,
+          "cy": 54.78668939401711,
+          "radius_nm": 8.342524498169318,
+          "speed_kts": 285.0850747014431,
+          "angle_rad": 2.62806163071179
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.34 NM circular orbit, 285.09 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-032",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, join the tanker and report at 10 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 1.41225825440885,
+          "y": 0.8864372440239832,
+          "heading_deg": 90.0,
+          "speed_kts": 430.64949491145796
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 78.32555108186067,
+          "cy": 47.294416767189546,
+          "radius_nm": 7.728340283978975,
+          "speed_kts": 269.6899261571927,
+          "angle_rad": 0.5830432514320704
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "7.73 NM circular orbit, 269.69 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-011",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 25 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.654948801651026,
+          "y": 4.98757687047193,
+          "heading_deg": 90.0,
+          "speed_kts": 474.3065065924087
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 55.67259369479607,
+          "cy": 55.12366905172168,
+          "radius_nm": 7.68728232198916,
+          "speed_kts": 265.065181515734,
+          "angle_rad": 1.5725848066503898
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "7.69 NM circular orbit, 265.07 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-016",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, fly to the fuel tanker and advise control at 10 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.4838045905919506,
+          "y": 1.4319387078092696,
+          "heading_deg": 90.0,
+          "speed_kts": 442.343308162766
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 60.160817067410576,
+          "cy": 40.3448752683094,
+          "radius_nm": 9.92206037693989,
+          "speed_kts": 260.6979716184137,
+          "angle_rad": 0.25803979581365394
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.92 NM circular orbit, 260.70 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-051",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, join the tanker and report at 25 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.07048744853804,
+          "y": 4.526700040740101,
+          "heading_deg": 90.0,
+          "speed_kts": 468.40105181507823
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 57.01235206629399,
+          "cy": 51.15877714996898,
+          "radius_nm": 9.516040993637901,
+          "speed_kts": 279.3458449198437,
+          "angle_rad": 0.3818675686488904
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.52 NM circular orbit, 279.35 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-043",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, join the tanker and report at 20 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 2.1933084239508647,
+          "y": 2.6123214724406427,
+          "heading_deg": 90.0,
+          "speed_kts": 463.2279039778238
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 58.055774748461715,
+          "cy": 42.6081054324749,
+          "radius_nm": 8.017620597259972,
+          "speed_kts": 296.9424374548596,
+          "angle_rad": 0.473738395005387
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.02 NM circular orbit, 296.94 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-046",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, fly to the fuel tanker and advise control at 20 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.672231652978473,
+          "y": 1.900701089359698,
+          "heading_deg": 90.0,
+          "speed_kts": 458.34699509645804
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 57.081289206418916,
+          "cy": 54.3751043161499,
+          "radius_nm": 8.327946886324263,
+          "speed_kts": 274.1815514638957,
+          "angle_rad": 0.4508854131043795
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.33 NM circular orbit, 274.18 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-058",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, make your way to the fuel tanker, contact me when you are 20 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.865251205628471,
+          "y": -4.004090299479363,
+          "heading_deg": 90.0,
+          "speed_kts": 430.0690421096071
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 69.78326600068915,
+          "cy": 41.511789534301755,
+          "radius_nm": 6.4852458881244335,
+          "speed_kts": 260.29575093597293,
+          "angle_rad": 2.6824068054392116
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.49 NM circular orbit, 260.30 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-000",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, join the tanker and report at 25 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -0.27351775485308316,
+          "y": 1.4170720348182293,
+          "heading_deg": 90.0,
+          "speed_kts": 479.70677779612805
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 57.81880431065358,
+          "cy": 42.52266290110177,
+          "radius_nm": 6.379290385893684,
+          "speed_kts": 298.90443102644826,
+          "angle_rad": 2.433628096582765
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.38 NM circular orbit, 298.90 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-019",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, proceed to the tanker; call control when 10 nautical miles from it.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 2.875311580116092,
+          "y": 1.1969739927082488,
+          "heading_deg": 90.0,
+          "speed_kts": 475.32727365423113
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 62.07202518806413,
+          "cy": 54.40244258665659,
+          "radius_nm": 8.14764964540568,
+          "speed_kts": 290.3433605547142,
+          "angle_rad": 4.183978363985782
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.15 NM circular orbit, 290.34 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-030",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, make your way to the fuel tanker, contact me when you are 30 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.8987993761975805,
+          "y": -3.6696651059710703,
+          "heading_deg": 90.0,
+          "speed_kts": 449.5495557404326
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 65.98564237167281,
+          "cy": 52.732708121023734,
+          "radius_nm": 8.472380134521238,
+          "speed_kts": 290.16045012195025,
+          "angle_rad": 2.988101607821918
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.47 NM circular orbit, 290.16 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 6"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-008",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, proceed to the tanker; call control when 15 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.0336382465374303,
+          "y": -2.4008493702421907,
+          "heading_deg": 90.0,
+          "speed_kts": 421.63270141911175
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 54.28767825583572,
+          "cy": 53.343989469794586,
+          "radius_nm": 8.803617680760972,
+          "speed_kts": 280.4456310630034,
+          "angle_rad": 2.6378571328986564
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.80 NM circular orbit, 280.45 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-009",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, make your way to the fuel tanker, contact me when you are 15 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.7598674367779705,
+          "y": 3.282255917161942,
+          "heading_deg": 90.0,
+          "speed_kts": 468.53509047922455
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 58.42732044892159,
+          "cy": 42.292904670251055,
+          "radius_nm": 6.464244525101752,
+          "speed_kts": 282.263471897762,
+          "angle_rad": 0.6582739686777479
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "6.46 NM circular orbit, 282.26 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-021",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 25 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.6613062585624991,
+          "y": 1.940756307280581,
+          "heading_deg": 90.0,
+          "speed_kts": 443.34781038401803
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 72.16427397666175,
+          "cy": 47.7123129288006,
+          "radius_nm": 6.776298496950403,
+          "speed_kts": 270.42508796217675,
+          "angle_rad": 2.4072048339153542
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.78 NM circular orbit, 270.43 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-027",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, proceed to the tanker; call control when 15 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -0.5404945816284812,
+          "y": 0.982584769444693,
+          "heading_deg": 90.0,
+          "speed_kts": 449.3384811162677
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 63.78120237084445,
+          "cy": 48.44074649241588,
+          "radius_nm": 9.599413090915434,
+          "speed_kts": 281.8692207254947,
+          "angle_rad": 5.170964711741646
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.60 NM circular orbit, 281.87 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-055",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, proceed to the tanker; call control when 15 nautical miles from it.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 2.8131687222670028,
+          "y": 3.407905738139995,
+          "heading_deg": 90.0,
+          "speed_kts": 468.296401289159
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 50.79865122250296,
+          "cy": 47.999875132089215,
+          "radius_nm": 9.632504563224245,
+          "speed_kts": 265.55266268773846,
+          "angle_rad": 0.34668068858362866
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.63 NM circular orbit, 265.55 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-017",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 30 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 2.6705980113763585,
+          "y": 3.5480710410226095,
+          "heading_deg": 90.0,
+          "speed_kts": 474.9631852850301
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 79.6221354985155,
+          "cy": 57.25199641776757,
+          "radius_nm": 8.00029081776761,
+          "speed_kts": 289.0037097419165,
+          "angle_rad": 1.2397727522623478
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.00 NM circular orbit, 289.00 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-034",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 20 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 0.007793632160967512,
+          "y": -1.2498662004808936,
+          "heading_deg": 90.0,
+          "speed_kts": 476.9131327837492
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 70.84380615904426,
+          "cy": 46.9093306968477,
+          "radius_nm": 6.332640414078757,
+          "speed_kts": 264.22816058457767,
+          "angle_rad": 2.2502384745281545
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.33 NM circular orbit, 264.23 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-033",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 15 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.35441282797953,
+          "y": 4.813980573306187,
+          "heading_deg": 90.0,
+          "speed_kts": 477.21536256431324
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 58.594333508238414,
+          "cy": 50.622116052289094,
+          "radius_nm": 8.744974491073535,
+          "speed_kts": 287.61827601825803,
+          "angle_rad": 3.182445095564562
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.74 NM circular orbit, 287.62 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-052",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, join the tanker and report at 15 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.285831533463531,
+          "y": 0.30457586579409135,
+          "heading_deg": 90.0,
+          "speed_kts": 463.7605782444455
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 52.81268533236151,
+          "cy": 47.244472795391054,
+          "radius_nm": 9.686436749479217,
+          "speed_kts": 281.3670945508059,
+          "angle_rad": 4.349314741383371
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.69 NM circular orbit, 281.37 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-015",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 20 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.1618855184736563,
+          "y": 3.577207032993167,
+          "heading_deg": 90.0,
+          "speed_kts": 458.44403311835003
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 79.03142602076278,
+          "cy": 55.29909676617476,
+          "radius_nm": 9.93443170348104,
+          "speed_kts": 274.20400388852653,
+          "angle_rad": 3.6301753991697194
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.93 NM circular orbit, 274.20 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-028",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 20 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.335686378655758,
+          "y": 4.378506474262345,
+          "heading_deg": 90.0,
+          "speed_kts": 426.68131992353017
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 60.985476002259944,
+          "cy": 59.0918538604369,
+          "radius_nm": 8.874410856628515,
+          "speed_kts": 262.2200805297629,
+          "angle_rad": 0.9270348855738432
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.87 NM circular orbit, 262.22 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-035",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, fly to the fuel tanker and advise control at 10 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.6871086940451003,
+          "y": -0.9957931514597576,
+          "heading_deg": 90.0,
+          "speed_kts": 425.00607162981737
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 74.43154672045885,
+          "cy": 53.38105429693719,
+          "radius_nm": 9.163143994039855,
+          "speed_kts": 269.48870681599453,
+          "angle_rad": 4.801746280351316
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.16 NM circular orbit, 269.49 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-038",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 25 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.9768731513102797,
+          "y": 3.7455089623009137,
+          "heading_deg": 90.0,
+          "speed_kts": 479.06730126891773
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 61.95641364280859,
+          "cy": 49.60627580631137,
+          "radius_nm": 9.385245807430302,
+          "speed_kts": 268.57899781209727,
+          "angle_rad": 3.11855613146235
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.39 NM circular orbit, 268.58 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-049",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, make your way to the fuel tanker, contact me when you are 10 nautical miles out.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.044155796591806,
+          "y": -2.681601193774691,
+          "heading_deg": 90.0,
+          "speed_kts": 427.8447733920642
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 74.23312922277051,
+          "cy": 51.44557084934962,
+          "radius_nm": 9.817881851954395,
+          "speed_kts": 268.4699729580718,
+          "angle_rad": 3.450956867994054
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.82 NM circular orbit, 268.47 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-023",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, fly to the fuel tanker and advise control at 15 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.0356401333626222,
+          "y": 3.6950387234627726,
+          "heading_deg": 90.0,
+          "speed_kts": 464.30240332116483
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 65.3555332969466,
+          "cy": 47.921514424509496,
+          "radius_nm": 9.63799020643381,
+          "speed_kts": 287.28254917420736,
+          "angle_rad": 5.295104578417684
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.64 NM circular orbit, 287.28 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-005",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 30 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.401537225856556,
+          "y": 0.23395583931239106,
+          "heading_deg": 90.0,
+          "speed_kts": 420.10196902828676
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 67.3442144262521,
+          "cy": 57.82125492467987,
+          "radius_nm": 7.466109741085354,
+          "speed_kts": 267.53851816239876,
+          "angle_rad": 3.841709645970725
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "7.47 NM circular orbit, 267.54 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-010",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, proceed to the tanker; call control when 15 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.5367000784910934,
+          "y": -2.1795010354227387,
+          "heading_deg": 90.0,
+          "speed_kts": 448.1063951044489
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 56.32944173931171,
+          "cy": 49.98096878835194,
+          "radius_nm": 8.466593718951504,
+          "speed_kts": 263.7693677874354,
+          "angle_rad": 0.18046909142132864
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.47 NM circular orbit, 263.77 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-018",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 20 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.207106751691229,
+          "y": -4.273088305693316,
+          "heading_deg": 90.0,
+          "speed_kts": 466.1691004119702
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 53.81877342766584,
+          "cy": 45.22700091655271,
+          "radius_nm": 7.077322572084113,
+          "speed_kts": 265.8489739308402,
+          "angle_rad": 2.467830798476348
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.08 NM circular orbit, 265.85 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-025",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, make your way to the fuel tanker, contact me when you are 15 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 1.082497363996655,
+          "y": 2.3410220839056928,
+          "heading_deg": 90.0,
+          "speed_kts": 439.28441262401054
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 78.63792002589047,
+          "cy": 45.86538224701423,
+          "radius_nm": 6.80082297031098,
+          "speed_kts": 264.05343921035535,
+          "angle_rad": 3.3506469055766885
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.80 NM circular orbit, 264.05 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-029",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 30 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.9541556497464416,
+          "y": -3.740403223974409,
+          "heading_deg": 90.0,
+          "speed_kts": 464.1994409566322
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 54.80423131236305,
+          "cy": 59.013634144471055,
+          "radius_nm": 6.849740539473035,
+          "speed_kts": 266.1119758204017,
+          "angle_rad": 3.5467564336713524
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "6.85 NM circular orbit, 266.11 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-059",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, make your way to the fuel tanker, contact me when you are 10 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.200484090668433,
+          "y": -3.946201526839892,
+          "heading_deg": 90.0,
+          "speed_kts": 439.3031074617333
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 57.95549900013207,
+          "cy": 58.15493706188876,
+          "radius_nm": 7.9864051477854225,
+          "speed_kts": 295.4120405116523,
+          "angle_rad": 2.5587752013174874
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "7.99 NM circular orbit, 295.41 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-061",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 25 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.008241851550707,
+          "y": 0.14938358726308287,
+          "heading_deg": 90.0,
+          "speed_kts": 435.7972251429991
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 69.06904863429688,
+          "cy": 45.584570687942026,
+          "radius_nm": 7.432541208955486,
+          "speed_kts": 270.66598625076296,
+          "angle_rad": 3.561758599961412
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.43 NM circular orbit, 270.67 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 6"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-037",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 10 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.434235532477088,
+          "y": 0.5041760221801175,
+          "heading_deg": 90.0,
+          "speed_kts": 425.9160357710516
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 64.48136571735529,
+          "cy": 35.02818870629262,
+          "radius_nm": 9.661833477549644,
+          "speed_kts": 283.6207398033972,
+          "angle_rad": 2.958094210685693
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.66 NM circular orbit, 283.62 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-022",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 15 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 1.4983062041788786,
+          "y": 2.8048134910616485,
+          "heading_deg": 90.0,
+          "speed_kts": 437.30342777649315
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 54.48176056567756,
+          "cy": 51.8268407928977,
+          "radius_nm": 9.308840146338028,
+          "speed_kts": 279.7369296911972,
+          "angle_rad": 1.9012555661594708
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.31 NM circular orbit, 279.74 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-039",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, make your way to the fuel tanker, contact me when you are 30 nautical miles out.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.020366470247652,
+          "y": -3.81103132065887,
+          "heading_deg": 90.0,
+          "speed_kts": 426.69211390233727
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 53.575291011164175,
+          "cy": 46.07439231182297,
+          "radius_nm": 7.812174040764658,
+          "speed_kts": 264.382090210571,
+          "angle_rad": 2.5330395921856836
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.81 NM circular orbit, 264.38 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-007",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, make your way to the fuel tanker, contact me when you are 30 nautical miles out.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.595617855060969,
+          "y": 0.07385471273126942,
+          "heading_deg": 90.0,
+          "speed_kts": 455.6917499400231
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 79.42824681708731,
+          "cy": 44.389271683564125,
+          "radius_nm": 8.801081303912465,
+          "speed_kts": 278.28082003232953,
+          "angle_rad": 4.721022579429791
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.80 NM circular orbit, 278.28 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-057",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, proceed to the tanker; call control when 30 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.9240269297335755,
+          "y": -2.262536972470668,
+          "heading_deg": 90.0,
+          "speed_kts": 423.68655808767744
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 69.34527843540316,
+          "cy": 42.11088582889859,
+          "radius_nm": 7.55653343165194,
+          "speed_kts": 296.0701513718277,
+          "angle_rad": 6.254906367005003
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.56 NM circular orbit, 296.07 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-062",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, make your way to the fuel tanker, contact me when you are 20 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 0.17618406925731112,
+          "y": 0.13247892444793585,
+          "heading_deg": 90.0,
+          "speed_kts": 442.9683839622738
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 66.44618220417465,
+          "cy": 58.2604936879176,
+          "radius_nm": 9.111606592130748,
+          "speed_kts": 285.4462839479471,
+          "angle_rad": 5.953908144227052
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.11 NM circular orbit, 285.45 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 6"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-024",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 20 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 0.9498790660370293,
+          "y": 1.1244633784324174,
+          "heading_deg": 90.0,
+          "speed_kts": 470.7662679805721
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 64.68119556708804,
+          "cy": 56.75983270951643,
+          "radius_nm": 8.961005866452599,
+          "speed_kts": 298.492879776768,
+          "angle_rad": 4.024118306809202
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.96 NM circular orbit, 298.49 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-048",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, fly to the fuel tanker and advise control at 20 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 3.1821091115612337,
+          "y": -0.9511801720365787,
+          "heading_deg": 90.0,
+          "speed_kts": 429.74020937868124
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 64.53418631687093,
+          "cy": 43.8533430247269,
+          "radius_nm": 6.020936659094371,
+          "speed_kts": 284.7691001521656,
+          "angle_rad": 2.0503382581533396
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.02 NM circular orbit, 284.77 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-053",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, proceed to the tanker; call control when 25 nautical miles from it.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -0.6476686758737493,
+          "y": -0.300813657761525,
+          "heading_deg": 90.0,
+          "speed_kts": 439.9635812627265
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 50.597460444919726,
+          "cy": 46.91988575989615,
+          "radius_nm": 8.231256183979008,
+          "speed_kts": 283.14944722705195,
+          "angle_rad": 5.824421649084642
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.23 NM circular orbit, 283.15 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-002",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, fly to the fuel tanker and advise control at 25 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.703994621111156,
+          "y": 0.15472128678135633,
+          "heading_deg": 90.0,
+          "speed_kts": 440.6741464067593
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 62.857473010508826,
+          "cy": 51.850397643070636,
+          "radius_nm": 8.463743627509169,
+          "speed_kts": 294.17597707319834,
+          "angle_rad": 5.128205875327269
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.46 NM circular orbit, 294.18 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-003",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, proceed to the tanker; call control when 10 nautical miles from it.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.869424334566139,
+          "y": -3.811366212687306,
+          "heading_deg": 90.0,
+          "speed_kts": 428.4086916493975
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 56.021614647706436,
+          "cy": 42.39751662105726,
+          "radius_nm": 9.242447684201345,
+          "speed_kts": 299.4849877842999,
+          "angle_rad": 3.896716442246868
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.24 NM circular orbit, 299.48 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-036",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 20 nautical miles out.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.444180275560662,
+          "y": -1.3023814734792847,
+          "heading_deg": 90.0,
+          "speed_kts": 476.02732642168127
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 77.15362489074326,
+          "cy": 58.311388978475954,
+          "radius_nm": 6.101126112437381,
+          "speed_kts": 274.90936733407494,
+          "angle_rad": 6.097067882898062
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.10 NM circular orbit, 274.91 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-006",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 20 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.957317137820792,
+          "y": 1.6818544121745163,
+          "heading_deg": 90.0,
+          "speed_kts": 478.95827598572635
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 76.74559856821196,
+          "cy": 52.61173172647539,
+          "radius_nm": 6.097790342502643,
+          "speed_kts": 278.1574574812861,
+          "angle_rad": 3.4049176285493514
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "6.10 NM circular orbit, 278.16 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-026",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 15 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -3.9024735246416897,
+          "y": -4.877484602854998,
+          "heading_deg": 90.0,
+          "speed_kts": 424.6755677481277
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 58.80057841973688,
+          "cy": 43.70882490080403,
+          "radius_nm": 7.3172741992450785,
+          "speed_kts": 261.25552332351754,
+          "angle_rad": 4.360768063695679
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "7.32 NM circular orbit, 261.26 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-047",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, join the tanker and report at 25 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 1.6131021238895205,
+          "y": 1.3700814280222815,
+          "heading_deg": 90.0,
+          "speed_kts": 434.8156967147251
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 73.99236943357988,
+          "cy": 43.990696467803076,
+          "radius_nm": 9.605986162458532,
+          "speed_kts": 264.30527417174113,
+          "angle_rad": 1.7052038249704369
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.61 NM circular orbit, 264.31 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-013",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, proceed to the tanker; call control when 10 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.94266496371195,
+          "y": 1.3633261700108648,
+          "heading_deg": 90.0,
+          "speed_kts": 451.92341494274353
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 71.29217039415211,
+          "cy": 41.50151535008506,
+          "radius_nm": 8.341382898570597,
+          "speed_kts": 285.74331934048377,
+          "angle_rad": 2.164713991344446
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.34 NM circular orbit, 285.74 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-001",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, join the tanker and report at 25 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.866012685027539,
+          "y": -0.2170383524793369,
+          "heading_deg": 90.0,
+          "speed_kts": 455.03378242008705
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 60.84131233595581,
+          "cy": 39.7330259323418,
+          "radius_nm": 9.430201129810179,
+          "speed_kts": 276.4834427305054,
+          "angle_rad": 0.5742345637876253
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.43 NM circular orbit, 276.48 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 25.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-012",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, join the tanker and report at 30 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -4.353481662004595,
+          "y": -0.9507871528757121,
+          "heading_deg": 90.0,
+          "speed_kts": 472.43594594810804
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 74.61453506649872,
+          "cy": 36.095641363194225,
+          "radius_nm": 9.700007844223014,
+          "speed_kts": 286.5135894060996,
+          "angle_rad": 3.1034013124301625
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.70 NM circular orbit, 286.51 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 6"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-014",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, fly to the fuel tanker and advise control at 10 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -1.5726453027832488,
+          "y": 0.045559714064452805,
+          "heading_deg": 90.0,
+          "speed_kts": 446.19782085034154
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 61.65870329590378,
+          "cy": 49.76678857598807,
+          "radius_nm": 9.364042462344964,
+          "speed_kts": 276.10728763161615,
+          "angle_rad": 6.079054700650422
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "9.36 NM circular orbit, 276.11 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 6"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-040",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 15 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 1.592101119178718,
+          "y": -2.823291217477534,
+          "heading_deg": 90.0,
+          "speed_kts": 427.86889169139977
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 69.78861830206003,
+          "cy": 44.849863468866396,
+          "radius_nm": 7.0841650354284695,
+          "speed_kts": 263.8898256080806,
+          "angle_rad": 1.3705165300491118
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "7.08 NM circular orbit, 263.89 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-042",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, fly to the fuel tanker and advise control at 15 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 4.725076592162761,
+          "y": 3.2893291918746392,
+          "heading_deg": 90.0,
+          "speed_kts": 467.0747388409587
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 65.98301909526049,
+          "cy": 42.25911588663314,
+          "radius_nm": 8.432001673462908,
+          "speed_kts": 278.11181198546427,
+          "angle_rad": 4.3113109852687534
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.43 NM circular orbit, 278.11 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "misinterpret",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-060",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, proceed to the tanker; call control when 10 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 2.852933821054191,
+          "y": -1.024019569609723,
+          "heading_deg": 90.0,
+          "speed_kts": 456.3554033884031
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 78.86912225631376,
+          "cy": 36.0199012324757,
+          "radius_nm": 6.912050575456387,
+          "speed_kts": 297.33409575227046,
+          "angle_rad": 5.774745478257209
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.91 NM circular orbit, 297.33 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 6"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-031",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, fly to the fuel tanker and advise control at 30 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.8115705461013194,
+          "y": -4.681406045165579,
+          "heading_deg": 90.0,
+          "speed_kts": 436.21376150326034
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 71.30105708550931,
+          "cy": 58.748779780644696,
+          "radius_nm": 6.053396257964547,
+          "speed_kts": 285.57293773827433,
+          "angle_rad": 5.957703883614551
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.05 NM circular orbit, 285.57 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 6"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 30.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-044",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft 2, make your way to the fuel tanker, contact me when you are 20 nautical miles out.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 3.6693157319963525,
+          "y": 1.9481327558598434,
+          "heading_deg": 90.0,
+          "speed_kts": 457.81118391277425
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 78.78687247878757,
+          "cy": 39.38022151788839,
+          "radius_nm": 8.468634528631622,
+          "speed_kts": 295.5255403213707,
+          "angle_rad": 3.1069322072091796
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.47 NM circular orbit, 295.53 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 6"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-004",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, proceed to the tanker; call control when 15 nautical miles from it.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -0.12949567995732014,
+          "y": 1.9912184121764387,
+          "heading_deg": 90.0,
+          "speed_kts": 428.06391881974395
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 56.1573235460437,
+          "cy": 42.931811807491826,
+          "radius_nm": 6.932521551283109,
+          "speed_kts": 286.7787779976939,
+          "angle_rad": 3.4971661150788504
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "6.93 NM circular orbit, 286.78 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-041",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 20 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -0.24888072597986266,
+          "y": 3.7461789204486315,
+          "heading_deg": 90.0,
+          "speed_kts": 433.0932415567431
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 59.89099899418022,
+          "cy": 52.26501902278102,
+          "radius_nm": 8.250810813766897,
+          "speed_kts": 279.1973802988878,
+          "angle_rad": 0.9859472702385349
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.25 NM circular orbit, 279.20 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 20.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-050",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, join the tanker and report at 15 NM.",
+      "world": {
+        "channel_state": "clear",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -0.5667215522885503,
+          "y": -0.7479007751897466,
+          "heading_deg": 90.0,
+          "speed_kts": 440.7552885231854
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 60.9712805484046,
+          "cy": 49.50082568869791,
+          "radius_nm": 9.184002259046704,
+          "speed_kts": 260.7000135206721,
+          "angle_rad": 1.9654797242416318
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "9.18 NM circular orbit, 260.70 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-045",
+      "split": "test",
+      "address_kind": "resolved_ambiguity",
+      "transmission": "Aircraft two or three, fly to the fuel tanker and advise control at 15 NM.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.115030312288797,
+          "y": 0.3873780858979199,
+          "heading_deg": 90.0,
+          "speed_kts": 442.56244958644936
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 55.02317491986409,
+          "cy": 37.15299802880854,
+          "radius_nm": 8.73640423917655,
+          "speed_kts": 261.4922013340089,
+          "angle_rad": 2.056712142457065
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 9"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.74 NM circular orbit, 261.49 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-054",
+      "split": "test",
+      "address_kind": "misaddressed",
+      "transmission": "Aircraft 3, proceed to the tanker; call control when 10 nautical miles from it.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "initial_employment",
+        "deviation_inject_scheduled": true,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -0.8076424258245174,
+          "y": 3.9728525012804567,
+          "heading_deg": 90.0,
+          "speed_kts": 441.1279447531314
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 78.78135655659332,
+          "cy": 39.64989666176728,
+          "radius_nm": 8.498421840388247,
+          "speed_kts": 276.95135169846594,
+          "angle_rad": 1.4805959894293756
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "8.50 NM circular orbit, 276.95 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "recover_communications",
+          "trainee_level": "initial_employment"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "deferred"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 3",
+          "instruction": "join_tanker",
+          "report_at_nm": 10.0,
+          "acknowledged": false
+        }
+      }
+    },
+    {
+      "id": "test-063",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, proceed to the tanker; call control when 15 nautical miles from it.",
+      "world": {
+        "channel_state": "jammed",
+        "jamming_inject_scheduled": true,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": -2.4407150443756622,
+          "y": 1.6223602875820138,
+          "heading_deg": 90.0,
+          "speed_kts": 439.554105871139
+        },
+        "tanker": {
+          "callsign": "SHELL 1",
+          "cx": 51.10958364257189,
+          "cy": 44.583940483825,
+          "radius_nm": 6.68221098154128,
+          "speed_kts": 278.3145802577436,
+          "angle_rad": 2.9250806112214596
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 5",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 1",
+          "orbit": "6.68 NM circular orbit, 278.31 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": [
+          {
+            "type": "jamming",
+            "channel": "Channel 5"
+          }
+        ]
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    },
+    {
+      "id": "test-020",
+      "split": "test",
+      "address_kind": "direct",
+      "transmission": "Aircraft two, fly to the fuel tanker and advise control at 15 NM.",
+      "world": {
+        "channel_state": "in_use",
+        "jamming_inject_scheduled": false,
+        "trainee_level": "lfe_proficient",
+        "deviation_inject_scheduled": false,
+        "aircraft": {
+          "callsign": "aircraft 2",
+          "x": 2.43948965210331,
+          "y": -2.071946016563271,
+          "heading_deg": 90.0,
+          "speed_kts": 473.2630902724508
+        },
+        "tanker": {
+          "callsign": "SHELL 2",
+          "cx": 71.3023855400813,
+          "cy": 39.36973065160049,
+          "radius_nm": 8.814486054469311,
+          "speed_kts": 275.15345938530817,
+          "angle_rad": 5.423524224026487
+        }
+      },
+      "orientation": {
+        "own_callsigns": [
+          "aircraft 1",
+          "aircraft 2"
+        ],
+        "comms_plan": {
+          "primary": "Channel 6",
+          "backup": "Channel 7"
+        },
+        "briefing_material": {
+          "tanker_callsign": "SHELL 2",
+          "orbit": "8.81 NM circular orbit, 275.15 kts"
+        },
+        "exercise_plan": {
+          "plan_id": "basic_join",
+          "trainee_level": "lfe_proficient"
+        },
+        "exercise_injects": []
+      },
+      "white_force_plan": {
+        "deviation": "comply",
+        "jammed_call": "made"
+      },
+      "answer_key": {
+        "ACK": {
+          "addressee": "aircraft 2",
+          "instruction": "join_tanker",
+          "report_at_nm": 15.0,
+          "acknowledged": true
+        }
+      }
+    }
+  ]
+}

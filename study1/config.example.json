@@ -1,0 +1,12 @@
+{
+  "provider": "anthropic",
+  "models": {"T1": "claude-haiku-4-5-20251001", "T2": "claude-sonnet-5-5"},
+  "max_output_tokens": 4096,
+  "model_settings": {"T2": {"thinking": {"type": "adaptive"}, "output_config": {"effort": "medium"}}},
+  "prices_usd_per_million": {"T1": {"input": 1.0, "output": 5.0}, "T2": {"input": 2.0, "output": 10.0}},
+  "price_checked_date": "2026-10-07",
+  "price_source": "https://platform.claude.com/docs/en/models/overview",
+  "router": {"checkpoint": "routellm/bert_gpt4_augmented", "revision": "86237e3df400762178ea98379477b8296e66d5e4"},
+  "verified_heldout_api": false,
+  "note": "Candidate configuration only. Confirm funded provider, model access, returned model versions and prices before the held-out calibration."
+}

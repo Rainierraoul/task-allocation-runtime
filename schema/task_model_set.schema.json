@@ -1,0 +1,561 @@
+{
+  "$defs": {
+    "Action": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "reversible": {
+          "title": "Reversible",
+          "type": "boolean"
+        },
+        "effect": {
+          "default": "",
+          "title": "Effect",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "reversible"
+      ],
+      "title": "Action",
+      "type": "object"
+    },
+    "AllocationOverride": {
+      "additionalProperties": false,
+      "properties": {
+        "tier": {
+          "$ref": "#/$defs/Tier"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "set_by": {
+          "title": "Set By",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tier",
+        "reason",
+        "set_by"
+      ],
+      "title": "AllocationOverride",
+      "type": "object"
+    },
+    "ControlLevel": {
+      "description": "Rasmussen's levels of cognitive control, as modelled in C-OODA (Breton, 2008).",
+      "enum": [
+        "skill",
+        "rule",
+        "knowledge"
+      ],
+      "title": "ControlLevel",
+      "type": "string"
+    },
+    "Cynefin": {
+      "description": "Cynefin domain of the task as a competent practitioner meets it (Step 22).",
+      "enum": [
+        "clear",
+        "complicated",
+        "complex",
+        "chaotic"
+      ],
+      "title": "Cynefin",
+      "type": "string"
+    },
+    "Decision": {
+      "additionalProperties": false,
+      "properties": {
+        "rule": {
+          "description": "The decision as an algorithm or in plain language",
+          "title": "Rule",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/DecisionKind"
+        },
+        "describability": {
+          "$ref": "#/$defs/Describability"
+        },
+        "abstain_when": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Abstain When",
+          "type": "array"
+        },
+        "confidence_threshold": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Set by people. Empty means the default for the task's impact.",
+          "title": "Confidence Threshold"
+        },
+        "policy_features": {
+          "description": "Observation names that key a stored policy for a normative decision",
+          "items": {
+            "type": "string"
+          },
+          "title": "Policy Features",
+          "type": "array"
+        }
+      },
+      "required": [
+        "rule",
+        "kind",
+        "describability"
+      ],
+      "title": "Decision",
+      "type": "object"
+    },
+    "DecisionKind": {
+      "description": "Epistemic: establishes what is the case. Normative: chooses what ought to happen.",
+      "enum": [
+        "epistemic",
+        "normative"
+      ],
+      "title": "DecisionKind",
+      "type": "string"
+    },
+    "Describability": {
+      "description": "How far the decision can be written down (DCARR Steps 5a, 6, 9, 18).",
+      "enum": [
+        "state_machine",
+        "algorithm",
+        "plain_language",
+        "not_describable"
+      ],
+      "title": "Describability",
+      "type": "string"
+    },
+    "Description": {
+      "additionalProperties": false,
+      "description": "Answers to DCARR Step 6.",
+      "properties": {
+        "action": {
+          "description": "What action is performed? (verb)",
+          "title": "Action",
+          "type": "string"
+        },
+        "object": {
+          "description": "To whom or what is the action performed?",
+          "title": "Object",
+          "type": "string"
+        },
+        "output": {
+          "description": "What does the action produce, or why is it needed?",
+          "title": "Output",
+          "type": "string"
+        },
+        "tooling": {
+          "description": "Processes, guides, equipment and tools used",
+          "title": "Tooling",
+          "type": "string"
+        },
+        "context": {
+          "description": "When the task happens in the scenario (temporality)",
+          "title": "Context",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action",
+        "object",
+        "output",
+        "tooling",
+        "context"
+      ],
+      "title": "Description",
+      "type": "object"
+    },
+    "FusionLevel": {
+      "description": "What a hand-off carries, on the JDL fusion levels and the matching SA levels.\n\nL0  signal     raw tool output or text\nL1  object     identified entities and states          (SA level 1, perception)\nL2  situation  relations between entities and the goal (SA level 2, comprehension)\nL3  impact     what happens next and what it means     (SA level 3, projection)",
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "title": "FusionLevel",
+      "type": "string"
+    },
+    "HandOff": {
+      "additionalProperties": false,
+      "description": "What a task model passes up when it finishes.",
+      "properties": {
+        "to": {
+          "default": "parent",
+          "enum": [
+            "parent",
+            "people"
+          ],
+          "title": "To",
+          "type": "string"
+        },
+        "fusion_level": {
+          "$ref": "#/$defs/FusionLevel"
+        },
+        "fields": {
+          "additionalProperties": {
+            "enum": [
+              "bool",
+              "number",
+              "text",
+              "enum",
+              "list"
+            ],
+            "type": "string"
+          },
+          "title": "Fields",
+          "type": "object"
+        },
+        "max_tokens": {
+          "exclusiveMinimum": 0,
+          "title": "Max Tokens",
+          "type": "integer"
+        },
+        "enum_values": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Enum Values",
+          "type": "object"
+        }
+      },
+      "required": [
+        "fusion_level",
+        "fields",
+        "max_tokens"
+      ],
+      "title": "HandOff",
+      "type": "object"
+    },
+    "Impact": {
+      "additionalProperties": false,
+      "description": "DCARR Step 23.",
+      "properties": {
+        "distance": {
+          "description": "Steps from the objective; 0 is on the critical path",
+          "minimum": 0,
+          "title": "Distance",
+          "type": "integer"
+        },
+        "failure_breaks_objective": {
+          "title": "Failure Breaks Objective",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "distance",
+        "failure_breaks_objective"
+      ],
+      "title": "Impact",
+      "type": "object"
+    },
+    "Objective": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "Objective",
+      "type": "object"
+    },
+    "Observation": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "value_type": {
+          "enum": [
+            "bool",
+            "number",
+            "text",
+            "enum",
+            "entity",
+            "position"
+          ],
+          "title": "Value Type",
+          "type": "string"
+        },
+        "source": {
+          "default": "tool",
+          "enum": [
+            "tool",
+            "model",
+            "person"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value_type"
+      ],
+      "title": "Observation",
+      "type": "object"
+    },
+    "Orientation": {
+      "additionalProperties": false,
+      "description": "An orientation entity: knowledge the decision needs besides the observations.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "data",
+            "procedure",
+            "intent",
+            "policy"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "kind"
+      ],
+      "title": "Orientation",
+      "type": "object"
+    },
+    "TaskModel": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "goal": {
+          "title": "Goal",
+          "type": "string"
+        },
+        "objectives": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Objectives",
+          "type": "array"
+        },
+        "parent": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent"
+        },
+        "subtasks": {
+          "description": "HTA plan: run in this order",
+          "items": {
+            "type": "string"
+          },
+          "title": "Subtasks",
+          "type": "array"
+        },
+        "plan": {
+          "default": "",
+          "title": "Plan",
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/$defs/Description"
+        },
+        "task_type": {
+          "$ref": "#/$defs/TaskType"
+        },
+        "control_level": {
+          "$ref": "#/$defs/ControlLevel"
+        },
+        "cynefin": {
+          "$ref": "#/$defs/Cynefin"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/Observation"
+          },
+          "title": "Observations",
+          "type": "array"
+        },
+        "orientations": {
+          "items": {
+            "$ref": "#/$defs/Orientation"
+          },
+          "title": "Orientations",
+          "type": "array"
+        },
+        "decision": {
+          "$ref": "#/$defs/Decision"
+        },
+        "action": {
+          "$ref": "#/$defs/Action"
+        },
+        "impact": {
+          "$ref": "#/$defs/Impact"
+        },
+        "frequency": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Occurrences per run (Step 21)",
+          "title": "Frequency"
+        },
+        "hand_off": {
+          "$ref": "#/$defs/HandOff"
+        },
+        "executors": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Registered executor name for each tier that can make this decision",
+          "propertyNames": {
+            "$ref": "#/$defs/Tier"
+          },
+          "title": "Executors",
+          "type": "object"
+        },
+        "allocation_override": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/AllocationOverride"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "goal",
+        "description",
+        "task_type",
+        "control_level",
+        "cynefin",
+        "decision",
+        "action",
+        "impact",
+        "hand_off"
+      ],
+      "title": "TaskModel",
+      "type": "object"
+    },
+    "TaskType": {
+      "description": "DCARR Step 19.",
+      "enum": [
+        "functional",
+        "procedural"
+      ],
+      "title": "TaskType",
+      "type": "string"
+    },
+    "Tier": {
+      "description": "Who or what makes a task model's decision.",
+      "enum": [
+        "T0",
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "title": "Tier",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "An M1 document: one scenario, its objectives and its task models.",
+  "properties": {
+    "scenario": {
+      "title": "Scenario",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "objectives": {
+      "items": {
+        "$ref": "#/$defs/Objective"
+      },
+      "title": "Objectives",
+      "type": "array"
+    },
+    "root": {
+      "title": "Root",
+      "type": "string"
+    },
+    "task_models": {
+      "items": {
+        "$ref": "#/$defs/TaskModel"
+      },
+      "title": "Task Models",
+      "type": "array"
+    }
+  },
+  "required": [
+    "scenario",
+    "version",
+    "objectives",
+    "root",
+    "task_models"
+  ],
+  "title": "TaskModelSet",
+  "type": "object"
+}
