@@ -94,7 +94,7 @@ repository.
 
 ## Current manuscript status
 
-The paper is in preparation for Cognition, Technology & Work. It reports the
+The [Research Square preprint](https://doi.org/10.21203/rs.3.rs-11312211/v1), version 1, was posted on 26 October 2026. It is under review at Cognition, Technology & Work and has not been peer reviewed by a journal. It reports the
 method, implementation, worked example and the completed computational
 comparison, including the three implementation findings above. Its
 supplementary results give per-task scores and the descriptive counts behind

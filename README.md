@@ -1,6 +1,6 @@
 # task-allocation-runtime
 
-This repository is the implementation of *Allocating cognitive work across people, language models and deterministic tools: a task-analytic method* (Simon Vajda, Applied Artificial Intelligence Institute, Deakin University; in preparation).
+This repository is the implementation of *Allocating cognitive work across people, language models and deterministic tools: A task-analytic method* (Simon Vajda, Applied Artificial Intelligence Initiative, Deakin University). The [Research Square preprint](https://doi.org/10.21203/rs.3.rs-11312211/v1), version 1, was posted on 26 October 2026. It is under review at *Cognition, Technology & Work* and has not been peer reviewed by a journal.
 
 The method decides, before a system runs, which kind of decision maker should make each decision in a cognitive task: a deterministic tool, a small language model, a larger reasoning model, or a person. It extends DCARR, the task-analysis framework from the author's doctoral thesis (Vajda, 2023). Each task is written as a task model with four stages (observe, orient, decide and act), and an ordered rule assigns each decision using four properties: how formally it can be specified, the level of cognitive control it needs, its Cynefin domain, and whether it establishes what is the case or decides what ought to be done. A machine tier that cannot decide abstains and the decision moves up. Choices about what ought to be done stay with people, who can store them as narrowly scoped policies. What each task passes on, including what supervisors receive, is typed and limited in size.
 
@@ -72,7 +72,11 @@ GitHub's "Cite this repository" button reads [CITATION.cff](CITATION.cff). In te
 
 > Vajda, S. R. L. (2026). *task-allocation-runtime* [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23225358
 
-The DOI points to the release archived on Zenodo, which holds this source and the study records. Once the paper is published, please cite the paper as well; its reference will be added here and to `CITATION.cff`.
+The software DOI points to the release archived on Zenodo, which holds this source and the study records. The associated paper is available as a preprint:
+
+> Vajda, S. (2026). *Allocating cognitive work across people, language models and deterministic tools: A task-analytic method* (Version 1) [Preprint]. Research Square. https://doi.org/10.21203/rs.3.rs-11312211/v1
+
+The preprint and software have separate DOIs. The preprint is under review and has not been peer reviewed by a journal.
 
 ## Licence
 
